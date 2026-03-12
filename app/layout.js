@@ -1,18 +1,15 @@
-import { currentUser } from "@clerk/nextjs/server";
-import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+// app/layout.js
+import { ClerkProvider } from "@clerk/nextjs/app-beta"; // use app-beta for App Router
 
-export default async function RootLayout({ children }) {
-  const user = await currentUser();
+export const metadata = {
+  title: "Social Network",
+};
 
+export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en">
       <body>
-        <div>
-          <SignInButton />
-          <SignUpButton />
-          <UserButton />
-        </div>
-        {children}
+        <ClerkProvider>{children}</ClerkProvider>
       </body>
     </html>
   );

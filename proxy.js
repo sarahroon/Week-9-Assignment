@@ -1,9 +1,5 @@
-import { withClerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default withClerkMiddleware(async (req) => {
-  return new Response("OK");
-});
-
-export const config = {
+export default clerkMiddleware({
   matcher: "/((?!_next/static|_next/image|favicon.ico).*)",
-};
+});

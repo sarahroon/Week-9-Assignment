@@ -1,5 +1,4 @@
-// app/layout.js
-import { ClerkProvider } from "@clerk/nextjs/app-beta"; // use app-beta for App Router
+import { ClerkProvider } from "@clerk/nextjs"; // <-- use this, NOT app-beta
 
 export const metadata = {
   title: "Social Network",

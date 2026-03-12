@@ -1,8 +1,5 @@
-import { ClerkProvider } from "@clerk/nextjs"; // <-- use this, NOT app-beta
-
-export const metadata = {
-  title: "Social Network",
-};
+// app/layout.js
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function RootLayout({ children }) {
   return (

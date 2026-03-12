@@ -1,4 +1,3 @@
-// pages/_app.js
 import { ClerkProvider } from "@clerk/nextjs";
 
 export default function MyApp({ Component, pageProps }) {
